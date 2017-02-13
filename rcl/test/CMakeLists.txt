@@ -166,7 +166,7 @@ function(test_target_function)
     client_fixture
     ENV ${extra_test_env}
     APPEND_LIBRARY_DIRS ${extra_lib_dirs}
-    TIMEOUT 15
+    TIMEOUT 40
   )
 endfunction()
 
