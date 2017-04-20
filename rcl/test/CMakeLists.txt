@@ -14,6 +14,14 @@ set(extra_test_libraries)
 set(extra_test_env)
 set(extra_lib_dirs "${rcl_lib_dir}")
 
+ament_add_gtest(test_logging rcl/test_logging.cpp
+  APPEND_LIBRARY_DIRS ${extra_lib_dirs})
+target_link_libraries(test_logging ${PROJECT_NAME})
+
+ament_add_gtest(test_logging_macros rcl/test_logging_macros.cpp
+  APPEND_LIBRARY_DIRS ${extra_lib_dirs})
+target_link_libraries(test_logging_macros ${PROJECT_NAME})
+
 # This subdirectory extends both extra_test_libraries, extra_test_env, and extra_lib_dirs.
 add_subdirectory(memory_tools)
 
